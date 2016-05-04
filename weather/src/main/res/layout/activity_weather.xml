@@ -1,0 +1,65 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.WeatherActivity"
+    android:id="@+id/parent_layout"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    >
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="weather" />
+    <ProgressBar
+        android:id="@+id/weather_progress"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/spread_line_chart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Base.Widget.AppCompat.ProgressBar"
+        />
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/spread_line_chart"
+        android:layout_width="match_parent"
+        android:layout_height="320dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/tv_weather_temp"
+        android:layout_below="@+id/content_text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="55dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="Medium Text"
+        android:id="@+id/tv_weather_aqi"
+        android:layout_below="@+id/tv_weather_type"
+        android:layout_alignLeft="@+id/tv_weather_temp"
+        android:layout_alignStart="@+id/tv_weather_temp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Large Text"
+        android:id="@+id/tv_weather_type"
+        android:layout_below="@+id/tv_weather_temp"
+        android:layout_alignLeft="@+id/tv_weather_aqi"
+        android:layout_alignStart="@+id/tv_weather_aqi" />
+
+</RelativeLayout>
