@@ -10,4 +10,154 @@
     tools:context="com.android.gaojun.weather.activity.TranslateActivity">
 
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:id="@+id/layout_form"
+        >
+        <TextView
+            android:layout_weight="2"
+            android:text="From"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:id="@+id/edit_from_currency"
+             />
+
+        <Spinner
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner_currency"
+            android:entries="@array/currency"
+            />
+    </LinearLayout>
+
+
+<LinearLayout
+    android:id="@+id/layout_to"
+    android:layout_marginTop="10dp"
+    android:layout_below="@id/layout_form"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    >
+
+    <TextView
+        android:text="To"
+        android:layout_weight="2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content" />
+
+    <TextView
+        android:layout_weight="4"
+        android:id="@+id/text_to_currency"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <Spinner
+        android:id="@+id/spinner_currency2"
+        android:layout_weight="4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/currency" />
+</LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layout_date"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#662272c1"
+        >
+
+        <TextView
+            android:text="日期"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_weight="4"
+            android:id="@+id/text_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+             />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_time"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#662272c1"
+        >
+
+        <TextView
+            android:text="时间"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_weight="4"
+            android:id="@+id/text_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+             />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/layout_currency"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/layout_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="#662272c1"
+        >
+
+        <TextView
+            android:text="汇率"
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_weight="4"
+            android:id="@+id/text_currency"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
+             />
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="换算"
+        android:id="@+id/button_huan_suan"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>

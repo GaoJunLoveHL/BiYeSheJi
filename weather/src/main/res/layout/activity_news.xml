@@ -46,7 +46,7 @@
         <TextView
             android:id="@+id/text_view_joke"
             android:layout_weight="1"
-            android:text="笑话精选"
+            android:text="新闻精选"
             android:gravity="center"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

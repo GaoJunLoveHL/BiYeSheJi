@@ -11,10 +11,10 @@
         android:layout_centerHorizontal="true"
         ></Spinner>
 
-    <ListView
+    <com.handmark.pulltorefresh.library.PullToRefreshListView
         android:id="@+id/listview_joke"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/news_types"
         />
 

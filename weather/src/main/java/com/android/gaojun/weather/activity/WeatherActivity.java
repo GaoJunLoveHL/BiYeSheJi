@@ -8,20 +8,27 @@ import android.os.Message;
 import android.support.v4.app.Fragment;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.amap.api.location.AMapLocation;
 import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
+import com.android.gaojun.weather.Adapter.RecyclerAdapter;
 import com.android.gaojun.weather.GSON.CityCodeDao;
 import com.android.gaojun.weather.GSON.SevenDayDao;
 import com.android.gaojun.weather.R;
+import com.android.gaojun.weather.model.HistoryWeather;
 import com.baidu.apistore.sdk.ApiCallBack;
 import com.baidu.apistore.sdk.ApiStoreSDK;
 import com.baidu.apistore.sdk.network.Parameters;
@@ -44,6 +51,8 @@ import java.util.List;
  */
 public class WeatherActivity extends AppCompatActivity {
     private ProgressBar progressBar;
+    private ImageView location;
+    private ImageView refresh;
     private TextView tv;
     private TextView tv_curTemp;
     private TextView tv_type;
@@ -51,6 +60,10 @@ public class WeatherActivity extends AppCompatActivity {
     private Gson gson;
     private LineChart mLineChart;
     private String nowCityName;
+    private RelativeLayout parent_layout;
+    private RecyclerView mRecyclerView;
+    private RecyclerAdapter recyclerAdapter;
+    private List<HistoryWeather> weathers;
 
     private Handler mHandler = new Handler(new Handler.Callback() {
         @Override
@@ -73,14 +86,38 @@ public class WeatherActivity extends AppCompatActivity {
                     break;
                 case 3:
                     List<Bundle> bundles = (List<Bundle>) msg.obj;
+                    weathers = new ArrayList<>();
+                    HistoryWeather weather;
+                    for (int i = 0; i < 7; i++) {
+                        weather = new HistoryWeather();
+                        weather.setWeek(bundles.get(i).getString("week"));
+                        if (i==2){
+                            weather.setWeek("今天");
+                        }
+                        weather.setHightemp(bundles.get(i).getString("h_temp"));
+                        weather.setLowtemp(bundles.get(i).getString("l_temp"));
+                        weather.setType(bundles.get(i).getString("type"));
+                        weather.setFengxiang(bundles.get(i).getString("fengxiang"));
+                        weathers.add(weather);
+                    }
                     initChart(bundles);
+                    String type = bundles.get(2).getString("type");
                     tv.setText(nowCityName);
                     tv_curTemp.setText(bundles.get(2).getString("curTemp"));
-                    tv_type.setText(bundles.get(2).getString("type"));
+                    tv_type.setText(type);
                     tv_aqi.setText("PM2.5:" + bundles.get(2).getString("aqi"));
                     tv_curTemp.setVisibility(View.VISIBLE);
                     tv_type.setVisibility(View.VISIBLE);
                     tv_aqi.setVisibility(View.VISIBLE);
+                    recyclerAdapter = new RecyclerAdapter(WeatherActivity.this,weathers);
+                    mRecyclerView.setAdapter(recyclerAdapter);
+                    if (type.equals("多云")){
+                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_duoyun,getTheme()));
+                    }else if (type.equals("晴")){
+                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_qing,getTheme()));
+                    }else if (type.equals("阴")){
+                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_yin,getTheme()));
+                    }
                     break;
             }
             return false;
@@ -256,6 +293,28 @@ public class WeatherActivity extends AppCompatActivity {
         tv_type.setVisibility(View.INVISIBLE);
         tv_aqi = (TextView) findViewById(R.id.tv_weather_aqi);
         tv_aqi.setVisibility(View.INVISIBLE);
+
+        refresh = (ImageView) findViewById(R.id.refresh);
+        mRecyclerView = (RecyclerView) findViewById(R.id.weather_recyler_view);
+        //设置布局管理器
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+
+        //mRecyclerView.setAdapter();
+
+        mRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        //添加分割线
+//        mRecyclerView.addItemDecoration(new RecycleViewDivider(mContext, LinearLayoutManager.VERTICAL));
+
+        refresh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                locationInfo(nowCityName);
+            }
+        });
+
+        location = (ImageView) findViewById(R.id.iv_location);
+        parent_layout = (RelativeLayout) findViewById(R.id.parent_layout);
         mLineChart = (LineChart) findViewById(R.id.spread_line_chart);
         //LineData mLineData = initChart(36,100);
 //        Bundle bundle = getArguments();
@@ -277,7 +336,7 @@ public class WeatherActivity extends AppCompatActivity {
         gson = new Gson();
 
 
-        tv.setOnClickListener(new View.OnClickListener() {
+        location.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WeatherActivity.this, LocationActivity.class);
@@ -369,4 +428,6 @@ public class WeatherActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
+
 }

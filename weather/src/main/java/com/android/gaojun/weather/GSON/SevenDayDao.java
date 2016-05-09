@@ -127,6 +127,7 @@ public class SevenDayDao {
             private String lowtemp;
             private String type;
 
+
             public String getWeek() {
                 return week;
             }

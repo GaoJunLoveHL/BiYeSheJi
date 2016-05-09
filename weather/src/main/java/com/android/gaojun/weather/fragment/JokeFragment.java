@@ -14,6 +14,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import com.android.gaojun.weather.Adapter.NewsListAdapter;
 import com.android.gaojun.weather.GSON.NewsDao;
@@ -25,6 +26,8 @@ import com.baidu.apistore.sdk.ApiCallBack;
 import com.baidu.apistore.sdk.ApiStoreSDK;
 import com.baidu.apistore.sdk.network.Parameters;
 import com.google.gson.Gson;
+import com.handmark.pulltorefresh.library.PullToRefreshBase;
+import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,7 +42,7 @@ public class JokeFragment extends Fragment {
     private Spinner mSpinner;
     private ArrayAdapter mArrayAdapter;
     private NewsListAdapter newsListAdapter;
-    private ListView newsList;
+    private PullToRefreshListView newsList;
     private NewsListAdapter mListAdapter;
     private Gson gson;
 
@@ -49,6 +52,10 @@ public class JokeFragment extends Fragment {
 //    private List<String> titles;
     private List<String> links;
 //    private List<String> imageurls;
+
+    private int page = 1;
+    private String nowId = null;
+//    private String word = "Android";
 
     private Handler mHandler = new Handler(new Handler.Callback() {
         @Override
@@ -64,6 +71,7 @@ public class JokeFragment extends Fragment {
                     newsListAdapter = new NewsListAdapter(context,newsItems);
                     newsListAdapter.notifyDataSetChanged();
                     newsList.setAdapter(newsListAdapter);
+                    newsList.getRefreshableView().setSelection((page-1)*20);
                     break;
             }
             return false;
@@ -87,14 +95,23 @@ public class JokeFragment extends Fragment {
         newsItems = new ArrayList<>();
 //        imageurls = new ArrayList<>();
         mSpinner = (Spinner) view.findViewById(R.id.news_types);
-        newsList = (ListView) view.findViewById(R.id.listview_joke);
+        newsList = (PullToRefreshListView) view.findViewById(R.id.listview_joke);
+
+        newsList.setMode(PullToRefreshBase.Mode.PULL_UP_TO_REFRESH);
 
         getNewsTypes();
 //        mSpinner.setAdapter(new ArrayAdapter<String>(context,));
         mSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                getNews(ids.get(position));
+                page = 1;
+                links.clear();
+                newsItems.clear();
+                nowId = ids.get(position);
+                getNews(nowId,page);
+                if (newsList.isRefreshing()){
+                    newsList.onRefreshComplete();
+                }
             }
 
             @Override
@@ -111,11 +128,25 @@ public class JokeFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        newsList.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener2<ListView>() {
+            @Override
+            public void onPullDownToRefresh(PullToRefreshBase<ListView> refreshView) {
+
+            }
+
+            @Override
+            public void onPullUpToRefresh(PullToRefreshBase<ListView> refreshView) {
+                page++;
+                getNews(nowId,page);
+
+            }
+        });
         return view;
     }
 
     private void getNewsTypes() {
-        Parameters para = new Parameters();
+        final Parameters para = new Parameters();
         ApiStoreSDK.execute("http://apis.baidu.com/showapi_open_bus/channel_news/channel_news",
                 ApiStoreSDK.GET, para, new ApiCallBack() {
                     @Override
@@ -133,7 +164,7 @@ public class JokeFragment extends Fragment {
                             ids.add(channelList.get(j).getChannelId());
                             names.add(channelList.get(j).getName());
                         }
-                        getNews(ids.get(0));
+                        getNews(ids.get(0),page);
                         Message msg = new Message();
                         msg.arg1 = 1;
                         mHandler.sendMessage(msg);
@@ -146,9 +177,13 @@ public class JokeFragment extends Fragment {
                 });
     }
 
-    private void getNews(String channelId) {
+    private void getNews(String channelId,int page) {
         Parameters para = new Parameters();
-        para.put("channelId",channelId);
+
+        para.put("page",page+"");
+        if (!channelId.equals(null)){
+            para.put("channelId",channelId);
+        }
 
         ApiStoreSDK.execute("http://apis.baidu.com/showapi_open_bus/channel_news/search_news",
                 ApiStoreSDK.GET,para,new ApiCallBack(){
@@ -159,22 +194,26 @@ public class JokeFragment extends Fragment {
 
                     @Override
                     public void onSuccess(int i, String s) {
-                        links.clear();
-                        newsItems.clear();
+//                        links.clear();
+//                        newsItems.clear();
                         NewsDao newsDao = gson.fromJson(s, NewsDao.class);
                         List<NewsDao.ContentList> contentList = newsDao.getShowapi_res_body().getPagebean().getContentlist();
                         int size = contentList.size();
                         NewsItem newsItem;
-                        for (int j = 0; j < size; j++) {
-                            newsItem = new NewsItem();
-                            links.add(contentList.get(j).getLink());
-                            newsItem.setTitle(contentList.get(j).getTitle());
-                            if (contentList.get(j).getImageurls().size()>0){
-                                newsItem.setImageUrl(contentList.get(j).getImageurls().get(0).getUrl());
-                            }else {
-                                newsItem.setImageUrl("https://cdn0.iconfinder.com/data/icons/android-icons/512/error-01-128.png");
+                        if (contentList.size()==0){
+                            Toast.makeText(context,"到底了",Toast.LENGTH_SHORT).show();
+                        }else {
+                            for (int j = 0; j < size; j++) {
+                                newsItem = new NewsItem();
+                                links.add(contentList.get(j).getLink());
+                                newsItem.setTitle(contentList.get(j).getTitle());
+                                if (contentList.get(j).getImageurls().size()>0){
+                                    newsItem.setImageUrl(contentList.get(j).getImageurls().get(0).getUrl());
+                                }else {
+                                    newsItem.setImageUrl("https://cdn0.iconfinder.com/data/icons/android-icons/512/error-01-128.png");
+                                }
+                                newsItems.add(newsItem);
                             }
-                            newsItems.add(newsItem);
                         }
 
                         Message msg = new Message();
@@ -184,10 +223,16 @@ public class JokeFragment extends Fragment {
 
                     @Override
                     public void onComplete() {
-                        super.onComplete();
+                        if (newsList.isRefreshing()){
+                            newsList.onRefreshComplete();
+                        }
                     }
                 });
 
     }
 
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+    }
 }

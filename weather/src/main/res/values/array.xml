@@ -4,5 +4,33 @@
         <item>微信热门精选</item>
         <item>笑话精选</item>
     </string-array>
-
+    
+    <string-array name="currency">
+        <item>美元 USD</item>
+        <item>人民币 CNY</item>
+        <item>英镑 GBP</item>
+        <item>欧元 EUR</item>
+        <item>日元 JPY</item>
+        <item>泰铢 THB</item>
+        <item>台币 TWD</item>
+        <item>瑞士法郎 CHF</item>
+        <item>瑞典克朗 SEK</item>
+        <item>越南盾 VND</item>
+        <item>津巴布韦元 ZWD</item>
+        <item>澳大利亚元 AUD</item>
+        <item>白俄罗斯卢布 BYR</item>
+        <item>加拿大元 CAD</item>
+        <item>古巴比索 CUP</item>
+        <item>埃及镑 EGP</item>
+        <item>港币 HKD</item>
+        <item>印度卢比 INR</item>
+        <item>澳门元 MOP</item>
+        <item>缅甸元 MMK</item>
+        <item>新西兰元 NZD</item>
+        <item>南韩元 KPW</item>
+        <item>俄罗斯卢布 RUB</item>
+        <item>新加坡元 SGD</item>
+        <item>北韩元 KRW</item>
+        <item>菲律宾比索 PHP</item>
+    </string-array>
 </resources>
