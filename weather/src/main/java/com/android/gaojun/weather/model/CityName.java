@@ -1,18 +1,22 @@
 package com.android.gaojun.weather.model;
 
+import org.litepal.crud.DataSupport;
+
+import java.util.Date;
+
 /**
  * Created by Administrator on 2016/3/22.
  */
-public class CityName {
-    private int id;
+public class CityName extends DataSupport{
     private String name;
+    private long date;
 
-    public int getId() {
-        return id;
+    public long getDate() {
+        return date;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setDate(long date) {
+        this.date = date;
     }
 
     public String getName() {

@@ -60,6 +60,7 @@ public class WeatherActivity extends AppCompatActivity {
     private Gson gson;
     private LineChart mLineChart;
     private String nowCityName;
+    private String locationCity;
     private RelativeLayout parent_layout;
     private RecyclerView mRecyclerView;
     private RecyclerAdapter recyclerAdapter;
@@ -75,6 +76,7 @@ public class WeatherActivity extends AppCompatActivity {
                     if (!cityName.isEmpty()) {
                         mLocationClient.stopLocation();
                     }
+                    locationCity = msg.obj.toString();
                     locationInfo(cityName);
                     break;
                 case 2:
@@ -265,6 +267,7 @@ public class WeatherActivity extends AppCompatActivity {
             if (mLocationClient.isStarted()) {
                 Message msg = new Message();
                 msg.obj = amapLocation.getCity().substring(0, amapLocation.getCity().length() - 1);
+
                 msg.arg1 = 1;
                 mHandler.sendMessage(msg);
             }
@@ -327,9 +330,9 @@ public class WeatherActivity extends AppCompatActivity {
 //        }
         Intent intent = getIntent();
         String cityName = intent.getStringExtra("cityName");
-        String cityId = intent.getStringExtra("cityId");
-        if (cityName != null && cityId != null){
-            getWeatherInfo(cityId, cityName);
+//        String cityId = intent.getStringExtra("cityId");
+        if (cityName != null){
+            locationInfo(cityName);
             nowCityName = cityName;
             mLocationClient.stopLocation();
         }
@@ -340,7 +343,7 @@ public class WeatherActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WeatherActivity.this, LocationActivity.class);
-                intent.putExtra("cityName", tv.getText());
+                intent.putExtra("cityName", locationCity);
                 startActivity(intent);
             }
         });

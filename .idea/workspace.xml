@@ -26,99 +26,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c8cb0903-1e4a-4b77-a048-4e86219f1736" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-hdpi/default_ptr_flip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-hdpi/default_ptr_rotate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-hdpi/indicator_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-mdpi/default_ptr_flip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-mdpi/default_ptr_rotate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-mdpi/indicator_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-xhdpi/default_ptr_flip.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-xhdpi/default_ptr_rotate.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable-xhdpi/indicator_arrow.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/mipmap-hdpi/location.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/mipmap-hdpi/refresh.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/build.gradle" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/AndroidManifest.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/ILoadingLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/IPullToRefresh.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/LoadingLayoutProxy.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/OverscrollHelper.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshAdapterViewBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshBase.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshExpandableListView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshGridView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshHorizontalScrollView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshListView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshScrollView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/PullToRefreshWebView.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/extras/PullToRefreshWebView2.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/extras/SoundPullEventListener.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/EmptyViewMethodAccessor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/FlipLoadingLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/IndicatorLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/LoadingLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/RotateLoadingLayout.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/Utils.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/java/com/handmark/pulltorefresh/library/internal/ViewCompat.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/anim/slide_in_from_bottom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/anim/slide_in_from_top.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/anim/slide_out_to_bottom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/anim/slide_out_to_top.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable/indicator_bg_bottom.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/drawable/indicator_bg_top.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/pull_to_refresh_header_horizontal.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/layout/pull_to_refresh_header_vertical.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-ar/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-cs/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-de/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-es/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-fi/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-fr/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-he/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-it/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-iw/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-ja/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-ko/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-nl/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-pl/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-pt-rBR/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-pt/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-ro/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-ru/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values-zh/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values/attrs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values/dimens.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values/ids.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/pulltorefresh/src/main/res/values/pull_refresh_strings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/Adapter/RecyclerAdapter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/CurrencyDao.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/HistoryWeather.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/drawable/jianbian_duoyun.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/drawable/jianbian_qing.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/drawable/jianbian_yin.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/drawable/location.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/recycler_item.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/DataBaseManage.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MyBiYeSheJi.iml" afterPath="$PROJECT_DIR$/MyBiYeSheJi.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/settings.gradle" afterPath="$PROJECT_DIR$/settings.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/build.gradle" afterPath="$PROJECT_DIR$/weather/build.gradle" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/SevenDayDao.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/SevenDayDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/TranslateActivity.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/TranslateActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" afterPath="$PROJECT_DIR$/pulltorefresh/pulltorefresh.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/assets/litepal.xml" afterPath="$PROJECT_DIR$/weather/src/main/assets/litepal.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/JokeFragment.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/JokeFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WxhotFragment.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WxhotFragment.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/layout/activity_news.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/activity_news.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/layout/activity_translate.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/activity_translate.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/layout/fragment_joke.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/fragment_joke.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/layout/fragment_wxhot.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/layout/fragment_wxhot.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/menu/activity_main_drawer.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/menu/activity_main_drawer.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/res/values/array.xml" afterPath="$PROJECT_DIR$/weather/src/main/res/values/array.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java" afterPath="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/weather/weather.iml" afterPath="$PROJECT_DIR$/weather/weather.iml" />
     </list>
     <ignored path="MyBiYeSheJi.iws" />
@@ -152,12 +67,95 @@
       <file leaf-file-name="WeatherActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.1203">
-              <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.39910313">
+              <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
               <folding>
-                <element signature="e#5928#5936#0" expanded="true" />
-                <element signature="e#14488#14647#0" expanded="true" />
-                <element signature="e#14646#14647#0" expanded="true" />
+                <element signature="e#14577#14736#0" expanded="true" />
+                <element signature="e#14735#14736#0" expanded="true" />
+                <element signature="e#15714#16018#0" expanded="true" />
+                <element signature="e#16017#16018#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LocationActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="110" column="37" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="37" />
+              <folding>
+                <element signature="e#1997#2005#0" expanded="true" />
+                <element signature="e#2139#2497#0" expanded="true" />
+                <element signature="e#2496#2497#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ChoseActivity.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+              <folding>
+                <element signature="e#1270#1947#0" expanded="true" />
+                <element signature="e#1946#1947#0" expanded="true" />
+                <element signature="e#2581#3296#0" expanded="true" />
+                <element signature="e#3295#3296#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WxhotFragment.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WxhotFragment.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HistoryWeather.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/HistoryWeather.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+              <folding>
+                <element signature="e#343#344#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DatabaseManage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/DatabaseManage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#458#459#0" expanded="true" />
+                <element signature="e#502#503#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CityName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#300#301#0" expanded="true" />
+                <element signature="e#338#339#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -177,128 +175,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="HistoryWeather.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/HistoryWeather.java">
+      <file leaf-file-name="litepal.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/weather/src/main/assets/litepal.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-              <folding>
-                <element signature="e#343#344#0" expanded="true" />
-                <element signature="e#383#384#0" expanded="true" />
-                <element signature="e#415#416#0" expanded="true" />
-                <element signature="e#451#452#0" expanded="true" />
-                <element signature="e#483#484#0" expanded="true" />
-                <element signature="e#533#534#0" expanded="true" />
-                <element signature="e#575#576#0" expanded="true" />
-                <element signature="e#608#609#0" expanded="true" />
-                <element signature="e#637#638#0" expanded="true" />
-                <element signature="e#681#682#0" expanded="true" />
-                <element signature="e#717#718#0" expanded="true" />
-                <element signature="e#752#753#0" expanded="true" />
-                <element signature="e#783#784#0" expanded="true" />
-                <element signature="e#831#832#0" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#905#906#0" expanded="true" />
-                <element signature="e#935#936#0" expanded="true" />
-                <element signature="e#981#982#0" expanded="true" />
-                <element signature="e#1019#1020#0" expanded="true" />
-                <element signature="e#1050#1051#0" expanded="true" />
-                <element signature="e#1077#1078#0" expanded="true" />
-                <element signature="e#1117#1118#0" expanded="true" />
-                <element signature="e#1149#1150#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="recycler_item.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/recycler_item.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.98275864">
-              <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SevenDayDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/SevenDayDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="127" column="32" selection-start-line="122" selection-start-column="12" selection-end-line="127" selection-end-column="32" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_weather.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.413793">
-              <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="47" />
-              <folding>
-                <element signature="e#269#302#0" expanded="true" />
-                <element signature="e#327#362#0" expanded="true" />
-                <element signature="e#388#423#0" expanded="true" />
-                <element signature="e#447#480#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="NewsActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/NewsActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TranslateActivity.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/TranslateActivity.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <element signature="e#4626#4627#0" expanded="false" />
-                <element signature="e#4680#4681#0" expanded="false" />
-                <element signature="e#5891#5892#0" expanded="false" />
-                <element signature="e#5945#5946#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_translate.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_translate.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.3275862">
-              <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="activity_location.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_location.xml">
-          <provider editor-type-id="android-designer">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="54" />
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -3030,18 +2911,10 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/Adapter/CityListAdapter.java" />
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/MySharedPreferences.java" />
-        <option value="$PROJECT_DIR$/weather/src/main/res/layout/activity_chose.xml" />
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/CityListDao.java" />
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java" />
-        <option value="$PROJECT_DIR$/weather/src/main/res/layout/fragment_weather.xml" />
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WeatherFragment.java" />
         <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WeatherActivity.java" />
         <option value="$PROJECT_DIR$/weather/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/weather/src/main/res/layout/my_title_layout.xml" />
         <option value="$PROJECT_DIR$/weather/src/main/res/menu/weather_menu.xml" />
-        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java" />
         <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/MainActivity.java" />
         <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/JuHeKey.java" />
         <option value="$PROJECT_DIR$/weather/src/main/res/values/strings.xml" />
@@ -3080,6 +2953,14 @@
         <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/Adapter/RecyclerAdapter.java" />
         <option value="$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml" />
         <option value="$PROJECT_DIR$/weather/src/main/res/layout/recycler_item.xml" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/Insert.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/DataBaseManage.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/assets/litepal.xml" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WeatherFragment.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/DatabaseManage.java" />
+        <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java" />
         <option value="$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java" />
       </list>
     </option>
@@ -3636,6 +3517,32 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="weather" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBiYeSheJi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="MyBiYeSheJi" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="pulltorefresh" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -3664,8 +3571,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -3790,7 +3698,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -4229,7 +4136,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="false" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.4978678" order="6" side_tool="false" content_ui="tabs" />
@@ -4238,8 +4145,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5042644" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22630993" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49234137" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40468228" sideWeight="0.4978678" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33444816" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32218507" sideWeight="0.49573562" order="7" side_tool="false" content_ui="tabs" />
@@ -4247,7 +4153,8 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18603411" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18710022" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -4261,7 +4168,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32887402" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.49234137" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -4284,37 +4191,24 @@
           <properties />
           <option name="timeStamp" value="105" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java</url>
+          <line>76</line>
+          <properties />
+          <option name="timeStamp" value="127" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java</url>
+          <line>330</line>
+          <properties />
+          <option name="timeStamp" value="129" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="127" />
+      <option name="time" value="130" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/WxhotDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33509701">
-          <caret line="10" column="37" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/list_news_item.xml">
-      <provider selected="true" editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="29" selection-start-line="17" selection-start-column="29" selection-end-line="17" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/Adapter/CityListAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="5" selection-start-line="44" selection-start-column="7" selection-end-line="63" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/sdk/platforms/android-23/data/res/values/colors_holo.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.214286">
@@ -4384,24 +4278,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://D:/sdk/sources/android-23/android/widget/ArrayAdapter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3322091">
-          <caret line="111" column="11" selection-start-line="111" selection-start-column="11" selection-end-line="111" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/NewsTypesDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3204047">
           <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/JuHeKey.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19224283">
-          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
         </state>
       </provider>
     </entry>
@@ -4429,13 +4309,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="47" column="41" selection-start-line="47" selection-start-column="41" selection-end-line="47" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/NewsItem.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -4552,14 +4425,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WxhotFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.029595016">
-          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_main.xml">
       <provider editor-type-id="android-designer">
         <state />
@@ -4576,42 +4441,6 @@
         <state vertical-scroll-proportion="-21.714285">
           <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="77" column="57" selection-start-line="77" selection-start-column="57" selection-end-line="77" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="47" selection-end-line="22" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/JokeFragment.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="235" column="8" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="8" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2723#2724#0" expanded="false" />
-            <element signature="e#2761#2762#0" expanded="false" />
-            <element signature="e#5370#5371#0" expanded="false" />
-            <element signature="e#5436#5437#0" expanded="false" />
-            <element signature="e#6370#6371#0" expanded="false" />
-            <element signature="e#6440#6441#0" expanded="false" />
-            <element signature="e#6947#6948#0" expanded="false" />
-            <element signature="e#7017#7018#0" expanded="false" />
-            <element signature="e#8925#8926#0" expanded="false" />
-            <element signature="e#8958#8959#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -4711,13 +4540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="53" selection-start-line="57" selection-start-column="53" selection-end-line="57" selection-end-column="53" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4626#4627#0" expanded="false" />
-            <element signature="e#4680#4681#0" expanded="false" />
-            <element signature="e#5891#5892#0" expanded="false" />
-            <element signature="e#5945#5946#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4732,54 +4555,173 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.109447">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_translate.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.3275862">
+        <state vertical-scroll-proportion="0.0">
           <caret line="98" column="0" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/HistoryWeather.java">
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/NewsActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding>
-            <element signature="e#343#344#0" expanded="true" />
-            <element signature="e#383#384#0" expanded="true" />
-            <element signature="e#415#416#0" expanded="true" />
-            <element signature="e#451#452#0" expanded="true" />
-            <element signature="e#483#484#0" expanded="true" />
-            <element signature="e#533#534#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
-            <element signature="e#608#609#0" expanded="true" />
-            <element signature="e#637#638#0" expanded="true" />
-            <element signature="e#681#682#0" expanded="true" />
-            <element signature="e#717#718#0" expanded="true" />
-            <element signature="e#752#753#0" expanded="true" />
-            <element signature="e#783#784#0" expanded="true" />
-            <element signature="e#831#832#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#905#906#0" expanded="true" />
-            <element signature="e#935#936#0" expanded="true" />
-            <element signature="e#981#982#0" expanded="true" />
-            <element signature="e#1019#1020#0" expanded="true" />
-            <element signature="e#1050#1051#0" expanded="true" />
-            <element signature="e#1077#1078#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1149#1150#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#3156#3157#0" expanded="false" />
+            <element signature="e#3210#3211#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/SevenDayDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="127" column="32" selection-start-line="122" selection-start-column="12" selection-end-line="127" selection-end-column="32" />
+          <folding>
+            <element signature="e#205#206#0" expanded="false" />
+            <element signature="e#235#236#0" expanded="false" />
+            <element signature="e#282#283#0" expanded="false" />
+            <element signature="e#320#321#0" expanded="false" />
+            <element signature="e#491#492#0" expanded="false" />
+            <element signature="e#527#528#0" expanded="false" />
+            <element signature="e#572#573#0" expanded="false" />
+            <element signature="e#614#615#0" expanded="false" />
+            <element signature="e#661#662#0" expanded="false" />
+            <element signature="e#700#701#0" expanded="false" />
+            <element signature="e#760#761#0" expanded="false" />
+            <element signature="e#808#809#0" expanded="false" />
+            <element signature="e#853#854#0" expanded="false" />
+            <element signature="e#891#892#0" expanded="false" />
+            <element signature="e#948#949#0" expanded="false" />
+            <element signature="e#994#995#0" expanded="false" />
+            <element signature="e#1342#1343#0" expanded="false" />
+            <element signature="e#1385#1386#0" expanded="false" />
+            <element signature="e#1433#1434#0" expanded="false" />
+            <element signature="e#1481#1482#0" expanded="false" />
+            <element signature="e#1523#1524#0" expanded="false" />
+            <element signature="e#1569#1570#0" expanded="false" />
+            <element signature="e#1623#1624#0" expanded="false" />
+            <element signature="e#1677#1678#0" expanded="false" />
+            <element signature="e#1715#1716#0" expanded="false" />
+            <element signature="e#1757#1758#0" expanded="false" />
+            <element signature="e#1803#1804#0" expanded="false" />
+            <element signature="e#1849#1850#0" expanded="false" />
+            <element signature="e#1893#1894#0" expanded="false" />
+            <element signature="e#1941#1942#0" expanded="false" />
+            <element signature="e#1999#2000#0" expanded="false" />
+            <element signature="e#2057#2058#0" expanded="false" />
+            <element signature="e#2098#2099#0" expanded="false" />
+            <element signature="e#2143#2144#0" expanded="false" />
+            <element signature="e#2195#2196#0" expanded="false" />
+            <element signature="e#2247#2248#0" expanded="false" />
+            <element signature="e#2290#2291#0" expanded="false" />
+            <element signature="e#2337#2338#0" expanded="false" />
+            <element signature="e#2393#2394#0" expanded="false" />
+            <element signature="e#2449#2450#0" expanded="false" />
+            <element signature="e#2491#2492#0" expanded="false" />
+            <element signature="e#2537#2538#0" expanded="false" />
+            <element signature="e#2591#2592#0" expanded="false" />
+            <element signature="e#2645#2646#0" expanded="false" />
+            <element signature="e#2684#2685#0" expanded="false" />
+            <element signature="e#2727#2728#0" expanded="false" />
+            <element signature="e#2775#2776#0" expanded="false" />
+            <element signature="e#2823#2824#0" expanded="false" />
+            <element signature="e#3116#3117#0" expanded="false" />
+            <element signature="e#3159#3160#0" expanded="false" />
+            <element signature="e#3207#3208#0" expanded="false" />
+            <element signature="e#3255#3256#0" expanded="false" />
+            <element signature="e#3299#3300#0" expanded="false" />
+            <element signature="e#3347#3348#0" expanded="false" />
+            <element signature="e#3405#3406#0" expanded="false" />
+            <element signature="e#3463#3464#0" expanded="false" />
+            <element signature="e#3504#3505#0" expanded="false" />
+            <element signature="e#3549#3550#0" expanded="false" />
+            <element signature="e#3601#3602#0" expanded="false" />
+            <element signature="e#3653#3654#0" expanded="false" />
+            <element signature="e#3696#3697#0" expanded="false" />
+            <element signature="e#3743#3744#0" expanded="false" />
+            <element signature="e#3799#3800#0" expanded="false" />
+            <element signature="e#3855#3856#0" expanded="false" />
+            <element signature="e#3897#3898#0" expanded="false" />
+            <element signature="e#3943#3944#0" expanded="false" />
+            <element signature="e#3997#3998#0" expanded="false" />
+            <element signature="e#4051#4052#0" expanded="false" />
+            <element signature="e#4090#4091#0" expanded="false" />
+            <element signature="e#4133#4134#0" expanded="false" />
+            <element signature="e#4181#4182#0" expanded="false" />
+            <element signature="e#4229#4230#0" expanded="false" />
+            <element signature="e#4552#4553#0" expanded="false" />
+            <element signature="e#4595#4596#0" expanded="false" />
+            <element signature="e#4643#4644#0" expanded="false" />
+            <element signature="e#4691#4692#0" expanded="false" />
+            <element signature="e#4729#4730#0" expanded="false" />
+            <element signature="e#4771#4772#0" expanded="false" />
+            <element signature="e#4817#4818#0" expanded="false" />
+            <element signature="e#4863#4864#0" expanded="false" />
+            <element signature="e#4907#4908#0" expanded="false" />
+            <element signature="e#4955#4956#0" expanded="false" />
+            <element signature="e#5013#5014#0" expanded="false" />
+            <element signature="e#5071#5072#0" expanded="false" />
+            <element signature="e#5112#5113#0" expanded="false" />
+            <element signature="e#5157#5158#0" expanded="false" />
+            <element signature="e#5209#5210#0" expanded="false" />
+            <element signature="e#5261#5262#0" expanded="false" />
+            <element signature="e#5304#5305#0" expanded="false" />
+            <element signature="e#5351#5352#0" expanded="false" />
+            <element signature="e#5407#5408#0" expanded="false" />
+            <element signature="e#5463#5464#0" expanded="false" />
+            <element signature="e#5505#5506#0" expanded="false" />
+            <element signature="e#5551#5552#0" expanded="false" />
+            <element signature="e#5605#5606#0" expanded="false" />
+            <element signature="e#5659#5660#0" expanded="false" />
+            <element signature="e#5698#5699#0" expanded="false" />
+            <element signature="e#5741#5742#0" expanded="false" />
+            <element signature="e#5789#5790#0" expanded="false" />
+            <element signature="e#5837#5838#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/recycler_item.xml">
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/NewsItem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/JuHeKey.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="77" selection-start-line="6" selection-start-column="77" selection-end-line="6" selection-end-column="77" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -4795,57 +4737,112 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/NewsActivity.java">
+    <entry file="file://$PROJECT_DIR$/weather/src/main/assets/litepal.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="39" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/GSON/SevenDayDao.java">
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/JokeFragment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="127" column="32" selection-start-line="122" selection-start-column="12" selection-end-line="127" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/activity_weather.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.413793">
-          <caret line="41" column="9" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="47" />
+        <state vertical-scroll-proportion="5.4857144">
+          <caret line="235" column="8" selection-start-line="235" selection-start-column="8" selection-end-line="235" selection-end-column="8" />
           <folding>
-            <element signature="e#269#302#0" expanded="true" />
-            <element signature="e#327#362#0" expanded="true" />
-            <element signature="e#388#423#0" expanded="true" />
-            <element signature="e#447#480#0" expanded="true" />
+            <element signature="e#8925#8926#0" expanded="false" />
+            <element signature="e#8958#8959#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/weather/src/main/res/layout/recycler_item.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/CityName.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.98275864">
-          <caret line="3" column="39" selection-start-line="3" selection-start-column="39" selection-end-line="3" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="27" selection-start-line="13" selection-start-column="27" selection-end-line="13" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#300#301#0" expanded="true" />
+            <element signature="e#338#339#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/model/HistoryWeather.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
+          <folding>
+            <element signature="e#343#344#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/fragment/WxhotFragment.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="62" column="0" selection-start-line="62" selection-start-column="0" selection-end-line="62" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/sdk/sources/android-23/android/widget/ArrayAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33280507">
+          <caret line="161" column="11" selection-start-line="161" selection-start-column="11" selection-end-line="161" selection-end-column="11" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/ChoseActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="0" selection-start-line="76" selection-start-column="0" selection-end-line="76" selection-end-column="0" />
+          <folding>
+            <element signature="e#1270#1947#0" expanded="true" />
+            <element signature="e#1946#1947#0" expanded="true" />
+            <element signature="e#2581#3296#0" expanded="true" />
+            <element signature="e#3295#3296#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/database/DatabaseManage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="5" selection-start-line="25" selection-start-column="5" selection-end-line="25" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#502#503#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/LocationActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="110" column="37" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="37" />
+          <folding>
+            <element signature="e#1997#2005#0" expanded="true" />
+            <element signature="e#2139#2497#0" expanded="true" />
+            <element signature="e#2496#2497#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/weather/src/main/java/com/android/gaojun/weather/activity/WeatherActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.1203">
-          <caret line="94" column="47" selection-start-line="94" selection-start-column="47" selection-end-line="94" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.39910313">
+          <caret line="330" column="0" selection-start-line="330" selection-start-column="0" selection-end-line="330" selection-end-column="0" />
           <folding>
-            <element signature="e#5928#5936#0" expanded="true" />
-            <element signature="e#14488#14647#0" expanded="true" />
-            <element signature="e#14646#14647#0" expanded="true" />
+            <element signature="e#14577#14736#0" expanded="true" />
+            <element signature="e#14735#14736#0" expanded="true" />
+            <element signature="e#15714#16018#0" expanded="true" />
+            <element signature="e#16017#16018#0" expanded="true" />
           </folding>
         </state>
       </provider>
