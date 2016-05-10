@@ -52,6 +52,7 @@ import java.util.List;
 public class WeatherActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private ImageView location;
+    private ImageView img_weather;
     private ImageView refresh;
     private TextView tv;
     private TextView tv_curTemp;
@@ -113,12 +114,100 @@ public class WeatherActivity extends AppCompatActivity {
                     tv_aqi.setVisibility(View.VISIBLE);
                     recyclerAdapter = new RecyclerAdapter(WeatherActivity.this,weathers);
                     mRecyclerView.setAdapter(recyclerAdapter);
-                    if (type.equals("多云")){
-                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_duoyun,getTheme()));
-                    }else if (type.equals("晴")){
-                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_qing,getTheme()));
-                    }else if (type.equals("阴")){
-                        parent_layout.setBackground(getResources().getDrawable(R.drawable.jianbian_yin,getTheme()));
+                    switch (type){
+                        case "晴":
+                            img_weather.setImageResource(R.mipmap.w00);
+                            break;
+                        case "多云":
+                            img_weather.setImageResource(R.mipmap.w01);
+                            break;
+                        case "阴":
+                            img_weather.setImageResource(R.mipmap.w02);
+                            break;
+                        case "阵雨":
+                            img_weather.setImageResource(R.mipmap.w03);
+                            break;
+                        case "雷阵雨":
+                            img_weather.setImageResource(R.mipmap.w04);
+                            break;
+                        case "雷阵雨伴有冰雹":
+                            img_weather.setImageResource(R.mipmap.w05);
+                            break;
+                        case "雨夹雪":
+                            img_weather.setImageResource(R.mipmap.w06);
+                            break;
+                        case "小雨":
+                            img_weather.setImageResource(R.mipmap.w07);
+                            break;
+                        case "中雨":
+                            img_weather.setImageResource(R.mipmap.w08);
+                            break;
+                        case "大雨":
+                            img_weather.setImageResource(R.mipmap.w09);
+                            break;
+                        case "暴雨":
+                            img_weather.setImageResource(R.mipmap.w10);
+                            break;
+                        case "大暴雨":
+                            img_weather.setImageResource(R.mipmap.w11);
+                            break;
+                        case "特大暴雨":
+                            img_weather.setImageResource(R.mipmap.w12);
+                            break;
+                        case "阵雪":
+                            img_weather.setImageResource(R.mipmap.w13);
+                            break;
+                        case "小雪":
+                            img_weather.setImageResource(R.mipmap.w14);
+                            break;
+                        case "中雪":
+                            img_weather.setImageResource(R.mipmap.w15);
+                            break;
+                        case "大雪":
+                            img_weather.setImageResource(R.mipmap.w16);
+                            break;
+                        case "暴雪":
+                            img_weather.setImageResource(R.mipmap.w17);
+                            break;
+                        case "雾":
+                            img_weather.setImageResource(R.mipmap.w18);
+                            break;
+                        case "冻雨":
+                            img_weather.setImageResource(R.mipmap.w19);
+                            break;
+                        case "沙尘暴":
+                            img_weather.setImageResource(R.mipmap.w20);
+                            break;
+                        case "小到大雨":
+                            img_weather.setImageResource(R.mipmap.w21);
+                            break;
+                        case "中到大雨":
+                            img_weather.setImageResource(R.mipmap.w22);
+                            break;
+                        case "大到暴雨":
+                            img_weather.setImageResource(R.mipmap.w23);
+                            break;
+                        case "暴雨到大暴雨":
+                            img_weather.setImageResource(R.mipmap.w24);
+                            break;
+                        case "大暴雨到特大暴雨":
+                            img_weather.setImageResource(R.mipmap.w25);
+                            break;
+                        case "小到中雪":
+                            img_weather.setImageResource(R.mipmap.w26);
+                            break;
+                        case "中到大雪":
+                            img_weather.setImageResource(R.mipmap.w27);
+                            break;
+                        case "大到暴雪":
+                            img_weather.setImageResource(R.mipmap.w28);
+                            break;
+                        case "浮尘":
+                            img_weather.setImageResource(R.mipmap.w29);
+                            break;
+                        case "扬沙":
+                            img_weather.setImageResource(R.mipmap.w30);
+                            break;
                     }
                     break;
             }
@@ -288,6 +377,14 @@ public class WeatherActivity extends AppCompatActivity {
         //设置定位回调监听
         mLocationClient.setLocationListener(mLocationListener);
         init();
+        Intent intent = getIntent();
+        String cityName = intent.getStringExtra("cityName");
+//        String cityId = intent.getStringExtra("cityId");
+        if (cityName != null){
+            locationInfo(cityName);
+            nowCityName = cityName;
+            mLocationClient.stopLocation();
+        }
         progressBar = (ProgressBar) findViewById(R.id.weather_progress);
         tv = (TextView) findViewById(R.id.content_text);
         tv_curTemp = (TextView) findViewById(R.id.tv_weather_temp);
@@ -296,6 +393,8 @@ public class WeatherActivity extends AppCompatActivity {
         tv_type.setVisibility(View.INVISIBLE);
         tv_aqi = (TextView) findViewById(R.id.tv_weather_aqi);
         tv_aqi.setVisibility(View.INVISIBLE);
+
+        img_weather = (ImageView) findViewById(R.id.img_weather_type);
 
         refresh = (ImageView) findViewById(R.id.refresh);
         mRecyclerView = (RecyclerView) findViewById(R.id.weather_recyler_view);
@@ -328,14 +427,7 @@ public class WeatherActivity extends AppCompatActivity {
 //            nowCityName = cityName;
 //            mLocationClient.stopLocation();
 //        }
-        Intent intent = getIntent();
-        String cityName = intent.getStringExtra("cityName");
-//        String cityId = intent.getStringExtra("cityId");
-        if (cityName != null){
-            locationInfo(cityName);
-            nowCityName = cityName;
-            mLocationClient.stopLocation();
-        }
+
         gson = new Gson();
 
 

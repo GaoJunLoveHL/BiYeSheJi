@@ -30,7 +30,7 @@
     android:layout_height="wrap_content"
     android:layout_below="@+id/tv_weather_aqi"
     android:layout_marginTop="10dp"
-    >
+    android:id="@+id/scrollView">
     <LinearLayout
         android:id="@+id/scroll_layout"
         android:layout_width="match_parent"
@@ -57,7 +57,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/content_text"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="50dp"
         android:layout_marginTop="55dp"
         android:text="Large Text"
         android:textAppearance="?android:attr/textAppearanceLarge" />
@@ -107,6 +107,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/img_weather_type"
+        android:src="@mipmap/w00"
+        android:layout_above="@+id/scrollView"
+        android:layout_toRightOf="@+id/content_text"
+        android:layout_toEndOf="@+id/content_text" />
 
 
 </RelativeLayout>
