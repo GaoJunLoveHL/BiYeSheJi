@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="AMap2DMap_2.8.1_AMapSearch_3.2.1_20160425">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/weather/libs/AMap2DMap_2.8.1_AMapSearch_3.2.1_20160425.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

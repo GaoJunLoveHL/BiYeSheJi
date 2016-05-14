@@ -35,4 +35,5 @@ dependencies {
     compile 'com.mcxiaoke.volley:library:1.0.19'
     compile 'com.android.support:recyclerview-v7:23.2.1'
     compile project(':pulltorefresh')
+    compile files('libs/AMap2DMap_2.8.1_AMapSearch_3.2.1_20160425.jar')
 }

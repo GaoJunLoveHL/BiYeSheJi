@@ -1,2 +1,2 @@
-include ':weather'
+include ':weather', ':AMap2DDemo'
 include ':pulltorefresh'

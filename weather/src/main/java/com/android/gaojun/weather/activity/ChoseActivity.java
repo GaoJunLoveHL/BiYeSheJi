@@ -17,7 +17,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.Switch;
 
 import com.android.gaojun.weather.GSON.CityListDao;
 import com.android.gaojun.weather.R;
@@ -62,7 +61,6 @@ public class ChoseActivity extends AppCompatActivity{
         ActionBar actionBar = getSupportActionBar();
         //actionBar.setTitle("BACK");
         actionBar.setDisplayHomeAsUpEnabled(true);
-
         gson = new Gson();
         searchList = (ListView) findViewById(R.id.search_city_list);
         ed_cityName = (EditText) findViewById(R.id.search_city);

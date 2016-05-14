@@ -12,10 +12,16 @@ import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.WindowManager;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.PopupWindow;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -25,10 +31,12 @@ import com.amap.api.location.AMapLocationClient;
 import com.amap.api.location.AMapLocationClientOption;
 import com.amap.api.location.AMapLocationListener;
 import com.android.gaojun.weather.Adapter.RecyclerAdapter;
+import com.android.gaojun.weather.Adapter.RecyclerIndexAdapter;
 import com.android.gaojun.weather.GSON.CityCodeDao;
 import com.android.gaojun.weather.GSON.SevenDayDao;
 import com.android.gaojun.weather.R;
 import com.android.gaojun.weather.model.HistoryWeather;
+import com.android.gaojun.weather.model.WeatherIndex;
 import com.baidu.apistore.sdk.ApiCallBack;
 import com.baidu.apistore.sdk.ApiStoreSDK;
 import com.baidu.apistore.sdk.network.Parameters;
@@ -63,22 +71,28 @@ public class WeatherActivity extends AppCompatActivity {
     private String nowCityName;
     private String locationCity;
     private RelativeLayout parent_layout;
+
     private RecyclerView mRecyclerView;
     private RecyclerAdapter recyclerAdapter;
     private List<HistoryWeather> weathers;
+
+    private RecyclerView indexRecyclerView;
+    private RecyclerIndexAdapter indexAdapter;
+    private List<WeatherIndex> weatherIndices;
 
     private Handler mHandler = new Handler(new Handler.Callback() {
         @Override
         public boolean handleMessage(Message msg) {
             switch (msg.arg1) {
                 case 1:
-                    String cityName = msg.obj.toString();
-                    nowCityName = cityName;
-                    if (!cityName.isEmpty()) {
-                        mLocationClient.stopLocation();
+                    if (msg.obj != null) {
+                        String cityName = msg.obj.toString();
+                        nowCityName = cityName;
+                        if (!cityName.isEmpty()) {
+                            mLocationClient.stopLocation();
+                        }
+                        locationInfo(cityName);
                     }
-                    locationCity = msg.obj.toString();
-                    locationInfo(cityName);
                     break;
                 case 2:
                     Bundle bundle = new Bundle();
@@ -94,7 +108,7 @@ public class WeatherActivity extends AppCompatActivity {
                     for (int i = 0; i < 7; i++) {
                         weather = new HistoryWeather();
                         weather.setWeek(bundles.get(i).getString("week"));
-                        if (i==2){
+                        if (i == 2) {
                             weather.setWeek("今天");
                         }
                         weather.setHightemp(bundles.get(i).getString("h_temp"));
@@ -107,14 +121,25 @@ public class WeatherActivity extends AppCompatActivity {
                     String type = bundles.get(2).getString("type");
                     tv.setText(nowCityName);
                     tv_curTemp.setText(bundles.get(2).getString("curTemp"));
-                    tv_type.setText(type);
+                    tv_type.setText(type+" >");
                     tv_aqi.setText("PM2.5:" + bundles.get(2).getString("aqi"));
                     tv_curTemp.setVisibility(View.VISIBLE);
                     tv_type.setVisibility(View.VISIBLE);
                     tv_aqi.setVisibility(View.VISIBLE);
-                    recyclerAdapter = new RecyclerAdapter(WeatherActivity.this,weathers);
+
+                    recyclerAdapter = new RecyclerAdapter(WeatherActivity.this, weathers);
                     mRecyclerView.setAdapter(recyclerAdapter);
-                    switch (type){
+
+
+                    tv_type.setOnClickListener(new View.OnClickListener() {
+                        @Override
+                        public void onClick(View v) {
+                            showPopupWindow(v);
+                        }
+                    });
+
+
+                    switch (type) {
                         case "晴":
                             img_weather.setImageResource(R.mipmap.w00);
                             break;
@@ -215,6 +240,42 @@ public class WeatherActivity extends AppCompatActivity {
         }
     });
 
+    private void showPopupWindow(View view){
+        View contentView = LayoutInflater.from(this).inflate(R.layout.popup_window_layout,null);
+
+        indexRecyclerView = (RecyclerView)contentView.findViewById(R.id.recy_weather_index);
+        indexRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        indexAdapter = new RecyclerIndexAdapter(WeatherActivity.this,weatherIndices);
+        indexRecyclerView.setAdapter(indexAdapter);
+        indexRecyclerView.setItemAnimator(new DefaultItemAnimator());
+
+        PopupWindow popupWindow = new PopupWindow(contentView, LinearLayout.LayoutParams.MATCH_PARENT,
+                LinearLayout.LayoutParams.MATCH_PARENT,true);
+        popupWindow.setTouchable(true);
+        popupWindow.setBackgroundDrawable(getResources().getDrawable(R.drawable.popwindow_background,getTheme()));
+        popupWindow.setTouchInterceptor(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                return false;
+            }
+        });
+
+        popupWindow.showAsDropDown(view,0,0,Gravity.CENTER);
+        // 设置背景颜色变暗
+        WindowManager.LayoutParams lp = getWindow().getAttributes();
+        lp.alpha = 0.5f;
+        getWindow().setAttributes(lp);
+        popupWindow.setOnDismissListener(new PopupWindow.OnDismissListener() {
+
+            @Override
+            public void onDismiss() {
+                WindowManager.LayoutParams lp = getWindow().getAttributes();
+                lp.alpha = 1f;
+                getWindow().setAttributes(lp);
+            }
+        });
+    }
+
     private void getWeatherInfo(String cityid, String cityname) {
         Parameters para = new Parameters();
         para.put("cityname", cityname);
@@ -256,6 +317,18 @@ public class WeatherActivity extends AppCompatActivity {
                 String h_temp = sevenDayDao.getRedData().getToday().getHightemp();
                 String l_temp = sevenDayDao.getRedData().getToday().getLowtemp();
                 String type = sevenDayDao.getRedData().getToday().getType();
+                List<SevenDayDao.RetData.Today.Index> indices = sevenDayDao.getRedData().getToday().getIndex();
+                weatherIndices = new ArrayList<WeatherIndex>();
+                WeatherIndex weatherIndex = null;
+                for (SevenDayDao.RetData.Today.Index index:indices) {
+                    weatherIndex = new WeatherIndex();
+                    weatherIndex.setName(index.getName());
+                    weatherIndex.setIndex(index.getIndex());
+                    weatherIndex.setDetails(index.getDetails());
+                    weatherIndex.setCode(index.getCode());
+                    weatherIndex.setOtherName(index.getOtherName());
+                    weatherIndices.add(weatherIndex);
+                }
 
                 todayBundle.putString("week", week);
                 todayBundle.putString("curTemp", curTemp);
@@ -356,7 +429,7 @@ public class WeatherActivity extends AppCompatActivity {
             if (mLocationClient.isStarted()) {
                 Message msg = new Message();
                 msg.obj = amapLocation.getCity().substring(0, amapLocation.getCity().length() - 1);
-
+                locationCity = msg.obj.toString();
                 msg.arg1 = 1;
                 mHandler.sendMessage(msg);
             }
@@ -376,14 +449,16 @@ public class WeatherActivity extends AppCompatActivity {
         mLocationClient = new AMapLocationClient(WeatherActivity.this.getApplicationContext());
         //设置定位回调监听
         mLocationClient.setLocationListener(mLocationListener);
-        init();
+
         Intent intent = getIntent();
         String cityName = intent.getStringExtra("cityName");
 //        String cityId = intent.getStringExtra("cityId");
-        if (cityName != null){
+        if (cityName != null) {
             locationInfo(cityName);
             nowCityName = cityName;
             mLocationClient.stopLocation();
+        } else {
+            init();
         }
         progressBar = (ProgressBar) findViewById(R.id.weather_progress);
         tv = (TextView) findViewById(R.id.content_text);
@@ -435,7 +510,12 @@ public class WeatherActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(WeatherActivity.this, LocationActivity.class);
-                intent.putExtra("cityName", locationCity);
+                if (locationCity != null) {
+                    intent.putExtra("locationCity", locationCity);
+                } else {
+                    intent.putExtra("locationCity", "武汉");
+                }
+                intent.putExtra("cityName", tv.getText().toString());
                 startActivity(intent);
             }
         });
@@ -517,12 +597,15 @@ public class WeatherActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            Intent intent = new Intent(WeatherActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
 
-
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(WeatherActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
+    }
 }

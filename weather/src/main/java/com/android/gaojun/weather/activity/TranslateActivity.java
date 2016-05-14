@@ -134,9 +134,7 @@ public class TranslateActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            Intent intent = new Intent(TranslateActivity.this,MainActivity.class);
-            startActivity(intent);
-            finish();
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -165,5 +163,12 @@ public class TranslateActivity extends AppCompatActivity {
                 super.onError(i, s, e);
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(TranslateActivity.this,MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

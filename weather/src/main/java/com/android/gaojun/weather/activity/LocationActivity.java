@@ -1,7 +1,9 @@
 package com.android.gaojun.weather.activity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBar;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -15,10 +17,7 @@ import android.widget.ListView;
 import com.android.gaojun.weather.Adapter.CityListAdapter;
 import com.android.gaojun.weather.R;
 import com.android.gaojun.weather.database.DatabaseManage;
-import com.android.gaojun.weather.database.MySharedPreferences;
 import com.android.gaojun.weather.model.CityName;
-
-import org.litepal.crud.DataSupport;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -27,6 +26,7 @@ import java.util.List;
 public class LocationActivity extends AppCompatActivity implements View.OnClickListener{
 
     private static String cityName;
+    private static String locationCityName;
 
     private ListView cityList;
     private Button addCity;
@@ -39,7 +39,6 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
-
         ActionBar actionBar = getSupportActionBar();
         //actionBar.setTitle("BACK");
         actionBar.setDisplayHomeAsUpEnabled(true);
@@ -48,16 +47,11 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
         addCity = (Button) findViewById(R.id.btn_chose_city);
         Intent intent = getIntent();
         cityName = intent.getStringExtra("cityName");
+        locationCityName = intent.getStringExtra("locationCity");
         addCity.setOnClickListener(this);
         saveCity(cityName);
 
-        List<CityName> cityNames =databaseManage.selectAll();
-        for(CityName c: cityNames){
-            names.add(c.getName());
-        }
-        names.add(0,cityName);
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
-        cityList.setAdapter(arrayAdapter);
+        loadList();
 
         cityList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -67,6 +61,39 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
                 startActivity(i);
             }
         });
+
+        cityList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+                final String cityName = names.get(position);
+                new AlertDialog.Builder(LocationActivity.this).setTitle("删除").setMessage("确认删除历史记录")
+                        .setPositiveButton("确定", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                databaseManage.delete(cityName);
+                                loadList();
+                            }
+                        }).setNegativeButton("取消", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+//                        dialog.cancel();
+                    }
+                }).show();
+                return true;
+            }
+        });
+    }
+
+    private void loadList(){
+        names.clear();
+        List<CityName> cityNames =databaseManage.selectAll();
+        for(CityName c: cityNames){
+            names.add(c.getName());
+        }
+        names.add(0,locationCityName);
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,names);
+        arrayAdapter.notifyDataSetChanged();
+        cityList.setAdapter(arrayAdapter);
     }
 
     public static void saveCity(String cityName){

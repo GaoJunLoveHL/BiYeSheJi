@@ -94,9 +94,7 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
     public boolean onOptionsItemSelected(MenuItem item) {
         int id = item.getItemId();
         if (id == android.R.id.home) {
-            Intent intent = new Intent(NewsActivity.this, MainActivity.class);
-            startActivity(intent);
-            finish();
+            onBackPressed();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -117,6 +115,8 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onBackPressed() {
-
+        Intent intent = new Intent(NewsActivity.this, MainActivity.class);
+        startActivity(intent);
+        finish();
     }
 }

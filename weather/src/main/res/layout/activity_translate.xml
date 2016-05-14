@@ -80,7 +80,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#662272c1"
+        android:background="#332272c1"
         >
 
         <TextView
@@ -106,7 +106,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#662272c1"
+        android:background="#332272c1"
         >
 
         <TextView
@@ -132,7 +132,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:background="#662272c1"
+        android:background="#332272c1"
         >
 
         <TextView
