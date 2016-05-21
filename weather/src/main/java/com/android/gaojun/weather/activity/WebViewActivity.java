@@ -1,6 +1,7 @@
 package com.android.gaojun.weather.activity;
 
 import android.content.Intent;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
@@ -18,6 +19,9 @@ public class WebViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setTitle("网页");
+        actionBar.setDisplayHomeAsUpEnabled(true);
         mWebView = (WebView) findViewById(R.id.web_view_news);
         settings = mWebView.getSettings();
         settings.setJavaScriptEnabled(true);

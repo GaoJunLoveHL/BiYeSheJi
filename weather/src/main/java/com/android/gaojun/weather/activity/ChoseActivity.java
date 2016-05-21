@@ -59,7 +59,7 @@ public class ChoseActivity extends AppCompatActivity{
         setContentView(R.layout.activity_chose);
 
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("BACK");
+        actionBar.setTitle("选择城市");
         actionBar.setDisplayHomeAsUpEnabled(true);
         gson = new Gson();
         searchList = (ListView) findViewById(R.id.search_city_list);

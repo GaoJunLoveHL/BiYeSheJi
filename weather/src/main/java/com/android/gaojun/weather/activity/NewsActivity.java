@@ -32,7 +32,7 @@ public class NewsActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("News");
+        actionBar.setTitle("新闻");
         actionBar.setDisplayHomeAsUpEnabled(true);
         initTextView();
     }

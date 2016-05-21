@@ -18,7 +18,9 @@
             android:id="@+id/search_city"
             android:layout_weight="1"
             android:layout_width="0dp"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:hint="输入地名"
+            />
         <Button
             android:id="@+id/btn_search"
             android:text="搜索"

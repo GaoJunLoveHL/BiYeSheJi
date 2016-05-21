@@ -68,7 +68,7 @@ public class TranslateActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_translate);
         ActionBar actionBar = getSupportActionBar();
-        actionBar.setTitle("Translate");
+        actionBar.setTitle("汇率");
         actionBar.setDisplayHomeAsUpEnabled(true);
         init();
 

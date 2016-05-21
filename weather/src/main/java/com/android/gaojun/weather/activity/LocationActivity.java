@@ -40,7 +40,7 @@ public class LocationActivity extends AppCompatActivity implements View.OnClickL
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location);
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("BACK");
+        actionBar.setTitle("历史记录");
         actionBar.setDisplayHomeAsUpEnabled(true);
 
         cityList = (ListView) findViewById(R.id.list_city);

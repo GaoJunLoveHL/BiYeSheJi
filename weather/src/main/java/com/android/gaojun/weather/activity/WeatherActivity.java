@@ -442,7 +442,7 @@ public class WeatherActivity extends AppCompatActivity {
         // requestWindowFeature(Window.FEATURE_CUSTOM_TITLE);
         setContentView(R.layout.activity_weather);
         ActionBar actionBar = getSupportActionBar();
-        //actionBar.setTitle("BACK");
+        actionBar.setTitle("天气");
         actionBar.setDisplayHomeAsUpEnabled(true);
         // getWindow().setFeatureInt(Window.FEATURE_CUSTOM_TITLE,R.layout.my_title_layout);
         //初始化定位
