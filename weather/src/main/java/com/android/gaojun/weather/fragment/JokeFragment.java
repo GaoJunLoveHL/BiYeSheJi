@@ -124,7 +124,7 @@ public class JokeFragment extends Fragment {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(context, WebViewActivity.class);
-                intent.putExtra("url", links.get(position));
+                intent.putExtra("url", links.get(position-1));
                 startActivity(intent);
             }
         });

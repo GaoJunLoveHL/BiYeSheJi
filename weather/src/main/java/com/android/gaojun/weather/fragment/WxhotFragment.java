@@ -99,7 +99,7 @@ public class WxhotFragment extends Fragment implements View.OnClickListener {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 //                Toast.makeText(context, wxhotUrls.get(position), Toast.LENGTH_LONG).show();
                 Intent intent = new Intent(context, WebViewActivity.class);
-                intent.putExtra("url", wxhotUrls.get(position));
+                intent.putExtra("url", wxhotUrls.get(position - 1));
                 startActivity(intent);
             }
         });
